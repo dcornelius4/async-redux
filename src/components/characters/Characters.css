@@ -1,0 +1,24 @@
+.Characters {
+  header {
+    justify-content: center;
+    text-align: center;
+    background-color: orangered;
+    font-size: 50px
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  li {
+    width: 25vw;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  img {
+    width: 100%;
+    margin: auto;
+  }
+}

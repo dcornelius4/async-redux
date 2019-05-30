@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
+import styles from './Characters.css';
 
 function Characters({ characters }) {
   const characterList = characters.map(character => (
@@ -10,9 +11,14 @@ function Characters({ characters }) {
   ));
 
   return (
-    <ul>
-      {characterList}
-    </ul>
+    <>
+    <section className={styles.Characters}>
+      <header>Avatar List</header>
+      <ul>
+        {characterList}
+      </ul>
+    </section>
+    </>
   );
 }
 
