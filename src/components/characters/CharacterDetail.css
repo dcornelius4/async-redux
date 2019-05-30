@@ -1,0 +1,28 @@
+html {
+  background: url('../../../assets/avatar.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.Characters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  h2 {
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
+  }
+
+  p {
+    background-color: rgb(51, 112, 153);
+    font-size: 20px;
+    border-radius: 10px
+  }
+
+  img {
+    border-radius: 10px
+  }
+}

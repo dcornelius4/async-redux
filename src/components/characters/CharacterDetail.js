@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './CharacterDetail.css';
+import { Link } from 'react-router-dom';
 
 function CharacterDetail({ character }) {
   const {
@@ -9,11 +11,13 @@ function CharacterDetail({ character }) {
   } = character;
 
   return (
-    <section>
-      <h2>{name}</h2>
+    <div className={styles.Characters}>
+      <Link to={'/'}>
+        <h2>{name}</h2>
+      </Link>
       <p>{position}</p>
       <img src={image} />
-    </section>
+    </div>
   );
 }
 

@@ -20,6 +20,8 @@
     padding: 10px;
     border-radius: 50px;
     margin: 5px;
+    text-decoration: none;
+    color: black;
   }
 
   li :hover {
@@ -32,4 +34,5 @@
     margin: auto;
     border-radius: 60px;
   }
+
 }
