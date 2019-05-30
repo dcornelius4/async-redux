@@ -35,7 +35,7 @@ const mapStateToProps = state => ({
   loading: getCharacterLoading(state)
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch, props) => ({
   fetch() {
     dispatch(fetchCharacter(props.match.params.id));
   }

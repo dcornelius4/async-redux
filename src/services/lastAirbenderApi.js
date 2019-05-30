@@ -18,6 +18,7 @@ export const getCharacters = () => {
 };
 
 export const getCharacter = id => {
+  console.log('hey', id);
   return get(`https://last-airbender-api.herokuapp.com/api/v1/characters/${id}`)
     .then(json => ({
       id: json._id,
