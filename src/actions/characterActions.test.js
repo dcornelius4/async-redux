@@ -1,4 +1,4 @@
-import { fetchCharacters, FETCH_CHARACTERS_LOADING, FETCH_CHARACTERS } from './characterActions';
+import { fetchCharacters, FETCH_CHARACTERS_LOADING, FETCH_CHARACTERS, FETCH_CHARACTERS_ERROR } from './characterActions';
 
 jest.mock('../services/lastAirbenderApi.js', () => ({
   getCharacters: () => Promise.resolve([])
@@ -6,19 +6,11 @@ jest.mock('../services/lastAirbenderApi.js', () => ({
 
 describe('characters actions', () => {
   it('dispatches a loading and fetch characters action', () => {
-    const thunk = fetchCharacters();
-    const dispatch = jest.fn();
-
-    return thunk(dispatch)
-      .then(() => {
-        expect(dispatch).toHaveBeenCalledWith({
-          type: FETCH_CHARACTERS_LOADING
-        });
-
-        expect(dispatch).toHaveBeenCalledWith({
-          type: FETCH_CHARACTERS,
-          payload: []
-        });
-      });
+    expect(fetchCharacters()).toEqual({
+      type: FETCH_CHARACTERS,
+      pendingType: FETCH_CHARACTERS_LOADING,
+      rejectedType: FETCH_CHARACTERS_ERROR,
+      payload: expect.any(Promise)
+    });
   });
 });
